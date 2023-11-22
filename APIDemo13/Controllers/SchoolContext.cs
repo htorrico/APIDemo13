@@ -10,5 +10,7 @@ namespace APIDemo13.Controllers
 
         }
         public DbSet<Student> Students { get; set; }
+        public DbSet<Grade> Grades { get; set; }
+
     }
 }

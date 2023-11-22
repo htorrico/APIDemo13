@@ -8,5 +8,9 @@
         public string City { get; set; }
         public bool IsActive { get; set; }
 
+        //Llaves foráneas
+        public Grade? Grade { get; set; }
+        public int? GradeID { get; set; }
+
     }
 }

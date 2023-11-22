@@ -51,6 +51,29 @@ namespace APIDemo13.Controllers
             return response;
 
         }
+
+        [HttpGet]
+        public List<Student> GetWithGrade()
+        {
+            //Expresiones lambda
+            var response = _context.Students.Include(x => x.Grade).
+                Where(x => x.IsActive == true).ToList();
+
+
+
+            //var students = _context.Students.ToList();
+            //var grades = _context.Grades.ToList();
+
+
+            //var response =
+            //from post in students
+            //join meta in grades on post.ID equals meta.Post_ID
+            //where post.ID == id
+            //select new { Post = post, Meta = meta };
+
+            return response;
+
+        }
         [HttpGet]
         public List<Student> GetOrderByCity()
         {
